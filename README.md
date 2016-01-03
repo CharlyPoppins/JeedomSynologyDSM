@@ -85,3 +85,10 @@ Dans DSM, cliquez sur l'icône Debian Chroot, cliquez sur Services, puis sur Ajo
 
 Jeedom est maintenant accessible à partir de l'url http://@IP_DU_NAS:8088/jeedom. 
 Pensez à bien configurer la section réseau dans JEEDOM.
+
+Définition des droits root à Jeedom
+-
+Cette étape permettra à Jeedom d’avoir plus de droits et donc de pouvoir par exemple s’éteindre et se redémarrer, ou de gerer le réseaux par exemple.
+
+    sudo su -
+    echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
