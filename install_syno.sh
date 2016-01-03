@@ -10,10 +10,10 @@ echo "export LANG=fr_FR.utf8" >> ~/.bashrc
 echo "export LC_ALL=fr_FR.utf8" >> ~/.bashrc
 dpkg-reconfigure tzdata
 echo "cd /home" >> ~/.bashrc
-wget --no-check-certificate http://github.com/jeedom/core/raw/master/install/install.sh
+wget --no-check-certificate https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
 chmod 777 install.sh
 ./install.sh
-wget --no-check-certificate https://github.com/sarakha63/Jeedom_Syno/raw/master/Chroot/jeedom.sh
+wget --no-check-certificate https://raw.githubusercontent.com/CharlyPoppins/JeedomSynologyDSM5.2/master/jeedom.sh
 chmod 777 jeedom.sh
 ./jeedom.sh stop
 sed -i -e "s/3306/3336/g" /etc/mysql/my.cnf
