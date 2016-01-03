@@ -24,11 +24,16 @@ Installation des drivers
 ssh root@IPDUNAS -p PORTUTILISE (22 par defaut)
 (le mot de passe du compte root est le même que le mot de passe du compte admin dans DSM)
 
-   cd /tmp
-   wget https://raw.githubusercontent.com/CharlyPoppins/JeedomSynologyDSM5.2/master/install_drivers_alias.sh
-   chmod 777 install_drivers_alias.sh
-   ./install_drivers_alias.sh
-   rm install_drivers_alias.sh
+    cd /tmp
+    
+    wget https://raw.githubusercontent.com/CharlyPoppins/JeedomSynologyDSM5.2/master/install_drivers_alias.sh
+    
+    chmod 777 install_drivers_alias.sh
+    
+    ./install_drivers_alias.sh
+    
+    rm install_drivers_alias.sh
+    
 
 Vous devez ensuite impérativement redémarrer votre Nas Synology avant de continuer dans l'installation de Jeedom.
 
@@ -41,3 +46,12 @@ Installation de Jeedom
 Connectez-vous en ssh, toujours en root, sur votre Nas Synology.
 
 Si vous avez bien respecté les étapes précédentes, en tapant `debian`, vous devriez vous retrouver dans la Debian. Un warning sur les locales peut s'afficher, normal à cette étape, nous allons les configurer par la suite.
+
+    cd /home
+    
+    wget --no-check-certificate https://raw.githubusercontent.com/CharlyPoppins/JeedomSynologyDSM5.2/master/install_syno.sh
+    
+    chmod 777 install_syno.sh
+    
+    ./install_syno.sh
+    
