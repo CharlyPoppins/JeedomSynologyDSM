@@ -23,7 +23,7 @@ Installation des drivers
 * Connexion ssh au NAS
 ssh root@IPDUNAS -p PORTUTILISE (22 par defaut)
 (le mot de passe du compte root est le même que le mot de passe du compte admin dans DSM)
-Sur DSM 6 il faut se connecter avec le compte admin puis faire un "sudo -i"
+* Sur DSM 6 il faut se connecter avec le compte admin puis faire un "sudo -i"
     
     cd /tmp
     
