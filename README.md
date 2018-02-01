@@ -92,3 +92,11 @@ Cette étape permettra à Jeedom d’avoir plus de droits et donc de pouvoir par
 
     sudo su -
     echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
+    
+
+Infos en vracs:
+==
+Passer en chroot
+-
+
+    /var/packages/debian-chroot/scripts/start-stop-status chroot
