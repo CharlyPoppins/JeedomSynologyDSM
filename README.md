@@ -100,3 +100,9 @@ Passer en chroot
 -
 
     /var/packages/debian-chroot/scripts/start-stop-status chroot
+
+// Ou bien lancer la commande (à voir commande executer automatiquement cette commande lors que l'on se connecte avec le compte root)
+alias debian="sudo -i chroot /usr/local/debian-chroot/var/chroottarget/ /bin/bash"
+
+// Puis taper
+debian
