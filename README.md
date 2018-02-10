@@ -4,6 +4,9 @@ Installation de Jeedom sur un NAS Synology DSM 5.2
 **Sources :**
 * http://www.domopi.eu/installation-de-jeedom-sur-un-nas-synology/
 
+WIKI très détaillé
+* https://github.com/PuNiSHeR374/Jeedom/wiki/Tuto-Installation-Auto-de-Jeedom-v2.x.x-sur-Syno-Debian-Chroot-Non-Officiel 
+
 Étapes:
 ==
 Installation de Debian chroot
