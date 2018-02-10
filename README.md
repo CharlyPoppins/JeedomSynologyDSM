@@ -109,3 +109,8 @@ alias debian="sudo -i chroot /usr/local/debian-chroot/var/chroottarget/ /bin/bas
 
 // Puis taper
 debian
+
+Liste des Devices USB
+```dmesg | grep tty
+debian```
+debian
