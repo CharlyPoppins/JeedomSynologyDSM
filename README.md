@@ -21,29 +21,23 @@ emplacement : http://packages.synocommunity.com/
 Dans le Centre de Paquets Synology, dans la section communauté, cherchez le paquet Debian Chroot (avec un logo en spirale rose) et installez-le. Cela prend quelques minutes. 
 Maintenant, toujours dans le Centre de Paquets Synology, allez dans les paquets installés, cliquez sur le paque Debian Chroot et Lancez-le.
 
+
 Installation des drivers
 -
-* Connexion ssh au NAS
-ssh root@IPDUNAS -p PORTUTILISE (22 par defaut)
-(le mot de passe du compte root est le même que le mot de passe du compte admin dans DSM)
-* Sur DSM 6 il faut se connecter avec le compte admin ssh admin@IPDUNAS -p PORTUTILISE puis faire un "sudo -i"
-    
-    cd /tmp
-    
-    wget https://raw.githubusercontent.com/CharlyPoppins/JeedomSynologyDSM5.2/master/install_drivers_alias.sh
-    
-    chmod 777 install_drivers_alias.sh
-    
-    ./install_drivers_alias.sh
-    
-    rm install_drivers_alias.sh
-    
+* Jadahl ne build plus les drivers pour Synology mais ils les met quand mme à disposition ici :
 
-Vous devez ensuite impérativement redémarrer votre Nas Synology avant de continuer dans l'installation de Jeedom.
+http://www.jadahl.com/drivers/
 
-Partage du dossier de la debian
--
-Allez dans le Panneau de configuration de DSM, dans l'onglet Dossier Partagé. Créez un nouveau dossier partagé que vous appelerez debian et donnez les droits en lecture/écriture à votre utilisateur.
+Il faut télécharger les drivers x86, puis les installer manuelement à partir du Gestionnaire de paquet du DSM
+
+
+* ATTENTION À BIEN SUPPRIMER TOUS LES ANCIENS DRIVERS AVANT D'INSTALLER LES NOUVEAUX
+
+Soit en désinstallant l'ancien packet soit en supprimer les fichiers si c'était une installation manuelle par SSH
+
+Vous devez ensuite impérativement redémarrer votre Nas Synology avant pour que les drivers soient pris en compte.
+
+
 
 Installation de Jeedom
 -
@@ -89,6 +83,7 @@ Dans DSM, cliquez sur l'icône Debian Chroot, cliquez sur Services, puis sur Ajo
 Jeedom est maintenant accessible à partir de l'url http://@IP_DU_NAS:8088/jeedom. 
 Pensez à bien configurer la section réseau dans JEEDOM.
 
+
 Définition des droits root à Jeedom
 -
 Cette étape permettra à Jeedom d’avoir plus de droits et donc de pouvoir par exemple s’éteindre et se redémarrer, ou de gerer le réseaux par exemple.
@@ -96,6 +91,11 @@ Cette étape permettra à Jeedom d’avoir plus de droits et donc de pouvoir par
     sudo su -
     echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
     
+
+Partage du dossier de la debian
+-
+Allez dans le Panneau de configuration de DSM, dans l'onglet Dossier Partagé. Créez un nouveau dossier partagé que vous appelerez debian et donnez les droits en lecture/écriture à votre utilisateur. Utile uniquement pour les développements et debug
+
 
 Infos en vracs:
 ==
